@@ -73,7 +73,8 @@ min-height: 600px; position: relative;">
 </div>
 
 <div id="proyect" class="container-fluid p-5  text-center text-white ">
-    <h1>Vota, participa y diviertete. </h1>
+    <h1>Vota, participa y diviertete. </h1> 
+    <a href="encuesta\encuesta2v.php"> <button type="button" class="btn btn-dark" name="encuesta">Prototipo Encuesta</button> </a>
 </div>
 
 <div id="contact" class="container-fluid p-5  text-center text-white ">
@@ -82,5 +83,7 @@ min-height: 600px; position: relative;">
 <div id="social" class="container-fluid p-5  text-center text-white ">
     <h1>Icono redes sociales</h1>
 </div>
+
+
 
 <?php include 'includes/foot.php'; ?>

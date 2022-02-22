@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,14 +17,14 @@
             margin-right: auto;
         }
     </style>
-    <title>Document</title>
+    <title>EncuestaTest</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid navbar-brand">
-            <div class="navbar-brand" >
+            <div class="navbar-brand">
                 <img src="colorjersey\logo.png" alt="Logo Perruno" width="30" height="24" class="d-inline-block align-text">
                 <h5 class="d-inline-block align-text"> <b>Vota, opina y diviertete.</h5>
             </div>
@@ -36,7 +35,7 @@
     <div class="container">
 
         <h2 style="text-align: center;"> <b>Bienvenid@ a la vida de un perro con marcha y estilo.</h2>
-        <h5 style="margin-top: 10px;" >A Toby_chan le encanta hacer excursiones tanto en la ciudad como por el campo, pero en invierno está haciendo mucho frio, y todos queremos que no pase frío y a la vez conserve su estilo ¿Qué color de sudadera te gusta más, para que Tobi_chan siga paseando por el mundo con el estilo más moderno?</h5>
+        <h5 style="margin-top: 10px;">A Toby_chan le encanta hacer excursiones tanto en la ciudad como por el campo, pero en invierno está haciendo mucho frio, y todos queremos que no pase frío y a la vez conserve su estilo ¿Qué color de sudadera te gusta más, para que Tobi_chan siga paseando por el mundo con el estilo más moderno?</h5>
     </div>
 
     <div class="container">
@@ -93,48 +92,45 @@
             </div>
             <div class="col-md-4 offset-md-1">
 
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+                <form action="resultado.php" method="POST">
 
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Introduzca su Nombre de Usuario:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="PetFriend53">
+                        <input type="text" class="form-control" name="userName" maxlength="9" placeholder="PetFriend53">
                     </div>
 
-                    <label for="exampleFormControlInput2" style="margin-top: 25px;">Vota marcando el color que más te gusta.</label>
+                    <label for="chosseColor" style="margin-top: 25px;">Vota marcando el color que más te gusta.</label>
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btnradio1">Verde</label>
+                        <input type="radio" class="btn-check" name="color" id="color1" value="Verde">
+                        <label class="btn btn-outline-dark" for="color1">Verde</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btnradio2">Rojo</label>
+                        <input type="radio" class="btn-check" name="color" id="color2" value="Rojo">
+                        <label class="btn btn-outline-dark" for="color2">Rojo</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btnradio3">Gris</label>
+                        <input type="radio" class="btn-check" name="color" id="color3" value="Gris">
+                        <label class="btn btn-outline-dark" for="color3">Gris</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btnradio4">Azul</label>
+                        <input type="radio" class="btn-check" name="color" id="color4" value="Azul">
+                        <label class="btn btn-outline-dark" for="color4">Azul</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btnradio5">Rosa</label>
+                        <input type="radio" class="btn-check" name="color" id="color5" value="Rosa">
+                        <label class="btn btn-outline-dark" for="color5">Rosa</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btnradio6">Verde claro</label>
+                        <input type="radio" class="btn-check" name="color" id="color6" value="Verde claro">
+                        <label class="btn btn-outline-dark" for="color6">Verde claro</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btnradio7">Marrón</label>
+                        <input type="radio" class="btn-check" name="color" id="color7" value="Marrón">
+                        <label class="btn btn-outline-dark" for="color7">Marrón</label>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" disabled>
-                        <label class="btn btn-outline-dark" for="btnradio8">Morado (comprado)</label>
+                        <input type="radio" class="btn-check" name="color" id="color8" value="Morado" disabled>
+                        <label class="btn btn-outline-dark" for="color8">Morado (comprado)</label>
                     </div>
 
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1" style="margin-top: 25px; ">Escribe tu comentario:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-dark" style="margin-top: 50px;">Enviar</button>
+                    <button type="submit" class="btn btn-dark" name="enviar" style="margin-top: 50px;">Participa!!</button>
+                    <button type="submit" class="btn btn-dark" name="resultado" style="margin-top: 50px;">Ver el resultado</button>
                 </form>
+
             </div>
         </div>
     </div>
