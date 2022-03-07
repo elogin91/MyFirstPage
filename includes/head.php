@@ -35,6 +35,9 @@
         #contact {
             background-color: #9F838C;
         }
+        #social {
+            background-color: #3E505B;
+        }
 
         .testimonial-card .card-up {
             height: 120px;
